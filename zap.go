@@ -1,4 +1,4 @@
-package main
+package auxozap
 
 import (
 	"github.com/cuigh/auxo/log"
@@ -75,7 +75,7 @@ func (z ZapLogger) WithFields(fields map[string]interface{}) log.Entry {
 }
 
 func (z ZapLogger) Debug(args ...interface{}) {
-
+	z.sugar.Debug(args...)
 }
 
 func (z ZapLogger) Debugf(format string, args ...interface{}) {

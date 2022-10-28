@@ -1,4 +1,4 @@
-package main
+package auxozap
 
 import (
 	"github.com/cuigh/auxo/log"
