@@ -61,7 +61,7 @@ func (z ZapLogger) WithField(key string, value interface{}) log.Entry {
 }
 
 func (z ZapLogger) WithFields(fields map[string]interface{}) log.Entry {
-	zapFields := make([]zap.Field, len(fields))
+	zapFields := make([]zap.Field, 0)
 	for k, v := range fields {
 		zapFields = append(zapFields, zap.Any(k, v))
 	}
