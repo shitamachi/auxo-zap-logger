@@ -16,6 +16,7 @@ type ZapLogger struct {
 }
 
 func NewZapLogger(name string, lvl zapcore.Level, logger *zap.Logger) *ZapLogger {
+	logger = logger.WithOptions(zap.AddCallerSkip(1))
 	return &ZapLogger{
 		name:   name,
 		lvl:    lvl,
